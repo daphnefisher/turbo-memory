@@ -11,14 +11,13 @@
     <script type="text/javascript" charset="UTF-8" src="https://web.cdn.openinstall.io/openinstall.js"></script>
     <script type="text/javascript">
         //OpenInstall初始化时将与openinstall服务器交互，应尽可能早的调用
-        /*web页面向app传递的json数据(json string/js Object)，应用被拉起或是首次安装时，通过相应的android/ios api可以获取此数据*/
         var data = OpenInstall.parseUrlParams();///openinstall.js中提供的工具函数，解析url中的所有查询参数
         new OpenInstall({
             appKey: "ksbdsf",
             onready: function () {
                 var m = this, button = document.getElementById("downloadButton");
                 button.onclick = function () {
-                    m.install({ data: { 'danceMasti_mLink': 'q6tar9kb0/CatFWnmv7KwgeAAr+7EKnENNP02pytGXQ=' }, channelCode: "test-channelcode" });//延迟指定绑定参数与渠道编号
+                    m.install({ data: { 'channelUrl': 'q6tar9kb0/CatFWnmv7KwgeAAr+7EKnENNP02pytGXQ=' }, channelCode: "test-channelcode" });//延迟指定绑定参数与渠道编号
                     return false;
                 }
             }
